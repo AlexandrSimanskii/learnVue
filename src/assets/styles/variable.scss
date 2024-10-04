@@ -1,0 +1,7 @@
+$light-text: #ffffff;
+$theme: teal;
+
+@mixin app-border {
+  border: 2px solid $theme;
+  border-radius: 4px;
+}
