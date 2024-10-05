@@ -1,10 +1,17 @@
 <template>
   <div class="list">
-    <div>{{ id }}
+    <div>
+      {{ id }}
       <p class="text"><span>Название:</span> {{ title }}.</p>
       <p class="text"><span>Описание:</span> {{ body }}.</p>
     </div>
     <my-button @click="$emit('delete')">Удалить</my-button>
+    <my-button
+      @click="
+        $router.push(`posts/${id}`)
+      "
+      >Открыть</my-button
+    >
   </div>
 </template>
 
@@ -15,9 +22,7 @@ const props = defineProps({
     required: true
   }
 })
-const { body, title,id } = props.post
-
-
+const { body, title, id } = props.post
 </script>
 
 <style lang="scss" scoped>

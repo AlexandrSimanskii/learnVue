@@ -13,7 +13,7 @@
 </template>
 
 <script setup>
-import { TransitionGroup } from 'vue'
+
 import Post from './Post.vue'
 
 const props = defineProps({
